@@ -64,7 +64,7 @@ if not WGET_AT:
 #
 # Update this each time you make a non-cosmetic change.
 # It will be added to the WARC files and reported to the tracker.
-VERSION = '20220212.01'
+VERSION = '20220212.02'
 TRACKER_ID = 'ukr-net'
 TRACKER_HOST = 'legacy-api.arpa.li'
 MULTI_ITEM_SIZE = 40
@@ -335,7 +335,7 @@ pipeline = Pipeline(
     CheckIP(),
     CheckRequirements(),
     GetItemFromTracker('https://{}/{}/multi={}/'
-        .format(TRACKER_HOST, 'arkivertest', MULTI_ITEM_SIZE),
+        .format(TRACKER_HOST, TRACKER_ID, MULTI_ITEM_SIZE),
         downloader, VERSION),
     PrepareDirectories(warc_prefix=TRACKER_ID),
     WgetDownload(
