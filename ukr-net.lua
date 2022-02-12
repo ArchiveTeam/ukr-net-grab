@@ -412,6 +412,8 @@ wget.callbacks.write_to_warc = function(url, http_stat)
   if string.match(url["url"], "^https?://[^/]*ukr%.net/news/details/") then
     local html = read_file(http_stat["local_file"])
     if not string.match(html, '<meta%s+http%-equiv="refresh"%s+content="0;URL=https?://[^"]+"') then
+      io.stdout:write("Got a bad page.\n")
+      io.stdout:flush()
       report_bad_url(url["url"])
       return false
     end
