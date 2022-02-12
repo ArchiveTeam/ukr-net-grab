@@ -245,7 +245,7 @@ wget.callbacks.download_child_p = function(urlpos, parent, depth, start_url_pars
   end
 
   if string.match(url, "^https?://[^/]*ukr%.net/news/details.*/[0-9]+%.html$") then
-    queue_url(queued_urls, url)
+    --queue_url(queued_urls, url)
     return false
   end
 
