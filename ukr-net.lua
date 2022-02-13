@@ -132,7 +132,7 @@ queue_url = function(urls_queue, url)
   url = string.match(url, "^([^<]+)")
   url = string.match(url, "^([^\\]+)")
   if not queued_urls[url] and not urls_queue[url] then
-    if find_path_loop(url, 2) then
+    if find_path_loop(url, 3) then
       return false
     end
     urls_queue[url] = true
@@ -192,7 +192,7 @@ wget.callbacks.download_child_p = function(urlpos, parent, depth, start_url_pars
     return true
   end
 
-  if find_path_loop(url, 2) then
+  if find_path_loop(url, 3) then
     return false
   end
 
