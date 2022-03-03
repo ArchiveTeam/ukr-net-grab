@@ -64,7 +64,7 @@ if not WGET_AT:
 #
 # Update this each time you make a non-cosmetic change.
 # It will be added to the WARC files and reported to the tracker.
-VERSION = '20220214.01'
+VERSION = '20220304.01'
 TRACKER_ID = 'ukr-net'
 TRACKER_HOST = 'legacy-api.arpa.li'
 MULTI_ITEM_SIZE = 40
@@ -326,7 +326,7 @@ class WgetArgs(object):
 project = Project(
     title = 'ukr.net',
     project_html = '''
-    <img class="project-logo" alt="logo" src="https://archiveteam.org/images/thumb/f/f3/Archive_team.png/235px-Archive_team.png" height="50px"/>
+    <img class="project-logo" alt="logo" src="https://wiki.archiveteam.org/images/thumb/6/61/Ukr-net-logo.png/799px-Ukr-net-logo.png" height="50px"/>
     <h2>Archiving sets of discovered outlinks. &middot; <a href="http://tracker.archiveteam.org/ukr-net/">Leaderboard</a></span></h2>
     '''
 )
